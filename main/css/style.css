@@ -1,0 +1,995 @@
+/********* ----- GOOGLE FONT ----- **********/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+
+
+/********* ----- GLOBAL STYLE ----- **********/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    line-height: 1.5;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    background-color: #fffaf5;
+    color:#726767;
+    scroll-behavior: smooth;   
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/********* ----- STYLE SCROLLBAR ----- *********/
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(135, 143, 253);
+    border-radius: 10px;
+}
+  
+/********* -----HEADER----- **********/
+
+.header-container{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.nav-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.header{
+    background-color: #d9e7ee;
+    padding: 12px 0;
+    position: relative;
+}
+
+.logo img{
+    width: 40px;
+    height: 50px;
+}
+
+.logo,
+.header .nav-menu ul{
+    padding: 0 25px;
+}
+
+.header .nav-menu ul li{
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.header .nav-menu ul li a{
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #707070;
+    padding: 10px;
+    transition: all 0.5 ease;
+}
+
+.header .nav-menu ul li a:hover,
+.header .nav-menu ul li a.active{
+    color: #44abff;
+}
+
+.header .nav-menu ul li a:hover{
+    border-left: 2px solid #44abff;
+}
+
+.header #nav-check{
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav-toggler{
+    cursor: pointer;
+    display: none;
+    margin-right: 15px;
+}
+
+.nav-toggler-icon{
+    height: 55px;
+    width: 55px;
+}
+
+/******** -----HEADER RESPONSIVE ----- ********/
+
+@media(max-width: 880px){
+
+   .nav-toggler{
+       display: flex;
+   } 
+   .header .nav-menu{
+       display: flex;
+       justify-content: center;
+       position: absolute;
+       left: 0;
+       top: 100%;
+       width: 100%;
+       height: 100vh;
+       background-color: #d9e7ee;
+       border-top: 1px solid rgba(255,255,255, 0.2);
+       opacity: 0;
+       visibility: hidden;
+       z-index: 100;
+   }   
+   .header .nav-menu ul{
+       margin-top: 40px;
+   }
+   .header .nav-menu ul li{
+       display: flex;
+       padding: 10px 0;
+       font-weight: 600;
+       font-size: 1.2rem;
+       text-transform: uppercase;
+   }
+   .header #nav-check:checked ~ .nav-menu{
+       opacity:1;
+       visibility: visible;
+   }
+
+}
+
+/******** ----- HOME ----- ********/
+
+.home{
+    background-color: #d9e7ee;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.home-container{
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.main-container{
+    padding-left: 200px;
+}
+
+.home.icon{
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    height: auto;
+}
+
+.girl-icon{
+    width: 250px;
+}
+
+.device-icon{
+    width: 210px;
+}
+
+.presentation{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-left: 4px solid #44abff;
+    padding: 10px;   
+}
+
+.name{
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #44abff;
+}
+
+.myjob{
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.7rem;
+    color: #707070;
+}
+
+.button{
+    width: 180px;
+    text-align: center;
+    white-space: nowrap;
+    color: #ac6314;
+    line-height: 1.2;
+    font-size: 1rem;
+    font-weight: 600;
+    background-image: linear-gradient(to right, #fcd481, #f7dc8a, #f3e395, #efeaa0, #ecf0ac);
+    border-radius: 11px;
+    padding: 10px 10px;
+    border: 1px solid #ac6314;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.button:hover{
+    background-image: linear-gradient(to right, #ecf0ac, #efeaa0, #f3e395, #f7dc8a, #fcd481);
+}
+
+.download{
+    padding-right: 15px;
+}
+
+.dw-file{
+    padding: 8px;
+    font-size: 25px;
+}
+
+.social-container{
+    display: flex;
+    position: absolute;
+    top: 60px;
+    right: 0; 
+    transition: all 0.5 ease; 
+}
+
+.icon-social{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 110px;
+    right: 50px;
+    width: 80px;
+}
+
+.icon-social img{
+    width: 150px;
+}
+
+.icon-social img:hover{
+    transform: scale(0.5);
+    transition-duration: 0.7s;
+}
+
+/******** ------ ABOUT ----- ********/
+
+.containers{
+    width: 100%;
+    height: auto;
+    padding: 0 250px;
+    margin: 120px 0 100px 0;
+}
+
+.section{
+    padding: 20px 0 10px 0;
+}
+
+.title-section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 150px;    
+}
+
+.style-titles{
+    border-left: 4px solid #44abff;
+    padding: 0 10px;
+}
+
+.title{
+    color: #44abff;
+    font-size: 1.4rem;
+}
+
+.subtitle{
+    font-size: 0.9rem;
+    color: #ca59a8;
+}
+
+.about-description{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 40px;
+}
+
+.about-description > * {
+    flex-basis: 100%;
+}
+
+.about-paragraph{
+    font-size: 1.1rem;
+}
+
+.about-img img{
+    width: 300px;
+    min-width: 180px;
+    border: 4px solid #d9e7ee;
+    border-radius: 40px;
+}
+
+.myname{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color:#44abff;
+}
+
+/******** ----- SKILLS ----- ********/
+
+.skill-section{
+    display: flex;
+    justify-content:space-between;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    
+}
+
+.skill{
+    background-color: #bfdcff2c;
+    height: 200px;
+    width: 200px;
+    padding: 20px 0;
+    border-radius: 20px;
+}
+
+.skill-name{
+    color: #ca59a8;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/******** ----- SERVICES ----- ********/
+
+.services-section{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: center;        
+}
+
+.myservice{
+    height: 500px;
+    width: 300px;
+    border: 3px solid #d9e7ee;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #e2faff42;
+}
+
+.myservice:hover{
+    -webkit-box-shadow: 5px 5px 15px 5px #A8A8A8; 
+    box-shadow: 5px 5px 15px 5px #A8A8A8;
+}
+
+.title-service{
+    margin: 20px;
+    color: #44abff;
+}
+
+.img-service{
+    margin: 10px 0;
+    width: 150px;
+}
+
+.button-style{
+	box-shadow: 0px 10px 14px -7px #f5dd8d;
+	background:linear-gradient(to bottom, #ffbe4f 5%, #e0d463 100%);
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size: 1.1rem;
+    font-weight: 500;
+	padding: 10px 30px;
+    margin-top: 20px;
+}
+
+.button-style:hover {
+	background:linear-gradient(to bottom, #e0d463 5%, #ffbe4f 100%);
+}
+
+.button-style:active{
+	position:relative;
+	top:20px;
+}
+
+.description-service{
+    height: 130px;
+}
+
+/******** ----- CONTACTS ----- ********/
+
+.contact-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-bottom: 70px;
+}
+
+.contact-cards{
+    display: flex;
+    flex-direction: column;
+    gap:20px;   
+}
+
+.card{
+    width: 250px;
+    height: 230px;
+    border: 1px solid #ca59a8;
+    text-align: center;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #ffaafb63;   
+}
+
+.title-card{
+    padding: 15px 0;
+    color: #ca59a8;
+    font-size: 0.9rem;
+}
+
+.contact-description{
+    padding-top: 20px;
+    font-size: 0.8rem;
+}
+.image-card{
+    width: 100px;
+    margin: 0 auto;
+}
+
+.form-contact{
+    padding-left: 100px;
+}
+
+.flex-form{
+	display: flex;
+	flex-direction: column;
+	background: #afc1f11f;
+    border-radius: 25px;
+    padding: 20px;
+    width: 500px;
+    -webkit-box-shadow: 0px 10px 13px -7px #423e3e, 5px 5px 15px 5px rgba(187, 177, 177, 0); 
+    box-shadow: 0px 10px 13px -7px #423e3e, 5px 5px 15px 5px rgba(187, 177, 177, 0);
+}
+
+.flex-form fieldset{
+    border:none;
+}
+
+.flex-form legend{    
+    color: #44abff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 20px 0;
+    text-shadow: 0 1px 1px #c6cbe7;
+    text-align: center;
+}
+
+.flex-form-container{
+    width: 340px;
+    margin: 5px auto 20px auto;
+    background: rgba(180, 197, 253, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.767);
+    border-radius: 8px;
+    line-height: 30px;
+    padding: 10px 5px;
+}
+
+.flex-form-container label{
+    padding:0 8px;
+    margin: 0 auto;
+}
+
+.flex-form-container input{
+    border-style: none;   
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #5982fc; 
+}
+
+.flex-form-container input::placeholder{
+    padding-left: 8px; 
+}
+
+.flex-form-container textarea{
+    border-radius: 8px;
+    border-color: #5982fc;
+    padding: 10px;
+}
+
+.form-button{
+    width: 180px;
+    background:linear-gradient(to bottom, #f36fe186 5%, #ca7db9 100%);
+	box-shadow: 0px 10px 14px -7px #f8c6f183;
+    display: block;
+    margin: 20px auto;
+    padding: 7px 25px;
+    border-style: none;
+}
+
+.form-button:hover{
+	background:linear-gradient(to bottom, #ca7db9 5%, #f36fe186 100%);
+}
+
+/******** ----- FOOTER ----- ********/
+
+footer{
+    width: 100%;
+    background-color: #d9e7ee;
+}
+
+.footer-container{
+    padding: 80px 90px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.logo-footer{
+    width: 70px;
+    height: 70px;
+}
+
+.title-footer{
+    font-size: 1.2rem;
+    color:#44abff;
+    padding-bottom: 20px;
+}
+
+.link-footer{
+    color: #383b49;
+    font-size: 1.1rem;
+}
+
+.link-footer:hover{
+    color:#44abff;
+    font-size: 1.1rem;
+}
+
+.social-footer{
+    font-size: 25px;
+    color: #383b49;
+    padding-right: 15px;
+}
+
+.social-footer:hover{
+    color: #44abff;
+}
+
+.break-style{
+    color: #383b49;
+}
+
+.footer-copy{
+    color: #383b49;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 3px;
+}
+
+/******** ----- STYLE PAGE 404 ----- ********/
+.section-page404{
+    background-color: #d9e7ee; 
+}
+
+.page404-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 30px;
+    overflow: auto;
+}
+
+.icon-404{
+    width: 700px;
+    padding: 30px 0;
+}
+
+.page404-title{
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
+
+.page404-subtitle{
+    font-size: 1.5rem;
+    padding-bottom: 30px;
+}
+
+.arrow-icon{
+    width: 100px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.button-page404{
+    background: #e7172c;
+    margin: 0 auto;
+    width: 200px;
+}
+
+.button-page404:hover{
+    background: #5982fc;
+}
+
+/******** ----- STYLE PAGE SERVICES ----- ********/
+.page-services{
+    padding: 40px 150px 70px 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.title-page-services{
+    padding: 40px 0;
+    color:#5982fc;
+}
+
+.page-services-section{
+    width: 800px;
+    border: 4px solid #5982fc;
+    border-radius: 30px;    
+}
+
+.page-services-img{
+    background-size: cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    height: 400px;
+    border-radius: 30px;
+}
+.page-services-paragraph{
+    padding: 30px;
+}
+
+.button-page-services{
+  background: #fd8a47;
+}
+
+.button-page-services:hover{
+    background: #ffa53f;
+}
+
+.webdev{
+    background-image: url('../img/webdev.png');
+}
+.webdesign{
+    background-image: url('../img/webdesign.png');
+}
+.graphicdesign{
+    background-image: url('../img/graphicdesign.png');
+}
+
+
+/******** ----- SCHERMI DESKTOP O PORTATILI ----- ********/
+
+@media screen and (min-width: 1024px) and (max-width: 1499px) { 
+    .containers{
+        padding: 0 150px;
+    }
+    .services-section{
+        gap: 50px;
+        justify-content: center;
+    }
+    .myservice{
+        height: 500px;
+        width: 290px;
+        margin-bottom: 30px;
+    }
+    .contact-cards{
+        display: flex;
+        flex-direction: row;
+        margin: 50px auto;  
+        gap: 60px;
+    }
+    .form-contact{
+        padding-left: 0;
+    } 
+    .page-services{
+        padding: 50px 50px 90px 50px;
+    }
+ }
+
+/********* ----- TABLET IN MODALITA' ORIZZONTALE ----- ********/
+
+@media screen and (min-width: 737px) and (max-width: 1023px) {
+  
+    .main-container{
+        padding: 60px 0 20px 180px;
+    }
+    .girl-icon{
+        width: 150px;
+    }
+    .device-icon{
+        width: 140px;
+    }
+    .name{
+        font-size: 1.8rem;
+        margin-bottom: 4px;
+    }
+    .myjob{
+        font-size: 1.3rem;
+    }
+    .button{
+        line-height: 1.1;
+        width: 160px;
+        font-size:.9rem;
+        padding: 8px;
+    }
+    .dw-file{
+        font-size: 22px;
+    }
+    .social-container{
+        position: absolute;
+        top: 60px;
+        right: 0;  
+    }
+    .icon-social{  
+        position: relative;
+        top: 50px;
+        right: 45px;
+        width: 65px;
+    }
+    .containers{
+        padding: 0 90px;
+        margin-top:70px;
+    }
+    .title-section{
+        margin-bottom: 100px;
+    }
+    .about-description{
+        gap:60px;
+    }
+    .about-paragraph{
+        font-size: 1rem;
+    } 
+    .services-section{
+        gap: 30px;
+        justify-content: center;
+    }
+    .myservice{
+        height: 500px;
+        width: 280px;
+        margin-bottom: 30px;
+    }
+    .contact-cards{
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;  
+        gap: 30px;
+    }
+    .form-contact{
+        margin: 99px auto 10px auto;
+        padding-left: 0;
+    }
+    .card{
+        width: 210px;
+        height: 220px;  
+    }
+    .footer-container{
+        padding: 60px 30px;
+    }
+    .page404-container{
+        padding: 100px 30px;
+    }
+    .page-services-section{
+        width: 650px;   
+    }   
+}
+
+/********* ----- TABLET IN MODALITA' VERTICALE ----- ********/
+@media screen and (min-width: 481px) and (max-width: 736px) {
+    .main-container{
+        padding-top: 15px;
+        padding-left: 80px;
+    }
+    .girl-icon{
+        width: 140px;
+    }
+    .device-icon{
+        width: 120px;
+    }
+    .name{
+        font-size: 1.5rem;
+    }
+    .myjob{
+        font-size: 1.2rem;
+    }
+    .button{
+        width: 150px;
+        font-size:0.9rem;
+    }
+    .dw-file{
+        font-size: 22px;
+    }
+    .social-container{
+        position: absolute;
+        top: 70px;
+        right: 0;  
+    }
+    .icon-social{  
+        position: relative;
+        top: 20px;
+        right: 20px;
+        width: 60px;
+    }
+    .containers{
+        padding: 0 40px;
+        margin-top:90px;
+    }
+    .title-section{
+        margin-bottom: 100px;
+    }
+    .about-description{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .about-paragraph{
+        font-size: 1rem;
+    }
+    .skill-section{
+        display: flex;
+        justify-content: center;
+    }
+    .skill{ 
+        height: 200px;
+        width: 200px;
+    }
+    .services-section{
+        justify-content: center;
+        gap: 40px;
+    }
+    .contact-cards{
+        margin: 0 auto;  
+        gap: 50px;
+    }
+    .card{
+        width: 220px;
+        height: 230px;  
+    }
+    .form-contact{
+        display: flex;
+        margin: 90px auto 0 auto;
+    }
+    .form-contact{
+        padding-left: 0;
+    }
+    .flex-form {
+        width: 400px;
+    }
+    .footer-container{
+        text-align: center;
+        gap: 50px;
+        padding: 50px;     
+    }
+    .page-services{
+        padding: 20px 0 70px 0;
+    }
+    .page-services-section{
+        width: 450px;     
+    }
+} 
+
+/********* ----- SMARTPHONE O PICCOLI TABLETS ----- ********/
+
+@media screen and (max-width: 480px) {
+    .main-container{
+        padding-top: 30px;
+        padding-left: 30px;
+    }
+    .girl-icon{
+        width: 120px;
+    }
+    .device-icon{
+        width: 110px;
+    }
+    .presentation{
+        margin-top: 30px;
+    }
+    .name{
+        font-size: 1.5rem;
+    }
+    .myjob{
+        font-size: 1.2rem;
+    }
+    .button{
+        width: 160px;
+        font-size: 0.9rem;
+    }
+    .dw-file{
+        font-size: 22px;
+    }
+    .social-container{
+        position: absolute;
+        top: 70px;
+        right: 0;  
+    }    
+    .icon-social{  
+        position: relative;
+        top: 50px;
+        right: 20px;
+        width: 60px;
+    }
+    .containers{
+        padding: 0 30px;
+        margin-top:90px;
+    }
+    .section{
+        padding:0;
+    }
+    .title-section{
+        margin-bottom: 80px;
+        padding-top: 15px;
+    }
+    .about-description{
+        display: flex;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    .about-paragraph{
+        font-size: 1rem;
+    }
+    .skill-section{
+        display: flex;
+        justify-content: center;
+    }
+    .services-section{
+        gap: 30px;
+        justify-content: center;
+    }
+    .contact-cards{
+        margin: 0 auto;  
+        gap: 50px;
+    }
+    .form-contact{      
+        padding-left: 0px;
+        margin: 40px auto;
+    }
+    .flex-form {
+        width: 330px;
+    }
+    .flex-form-container{
+        width: 300px;
+    }
+    .footer-container{
+        flex-direction:column;
+        text-align: center;
+        gap: 60px;
+        padding: 50px 0;
+    }
+    .logo-footer{
+        margin:0 auto;
+    }
+    .section-page404{
+        background-color: #d9e7ee; 
+        height: 100%;
+    }
+    .page-services{
+        padding: 20px 0 70px 0;
+    }
+    .page-services-section{
+        width: 250px;     
+    }
+}
+
+
+
